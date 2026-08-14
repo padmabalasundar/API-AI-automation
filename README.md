@@ -134,3 +134,9 @@ Download pytest-html-report to view results locally.
 Credentials Management: API keys are loaded locally using python-dotenv and injected into CI/CD environments using GitHub Secrets.
 
 Version Control Hygiene: Local configuration files (.env), Python virtual environments (venv/), and Pytest caches (.pytest_cache/) are excluded from repository tracking via .gitignore
+
+## Author Information
+
+**PadmaBalasundar** - Developed as a comprehensive reference implementation and portfolio project demonstrating end-to-end automation, structured validation, and CI/CD integration for generative AI endpoints.
+
+---
