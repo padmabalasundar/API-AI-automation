@@ -18,15 +18,22 @@ An AI API test automation framework built with Python, Pytest, and the OpenAI AP
 
 ---
 
-## Features
+## Problem Statement
+Testing AI APIs is different from testing standard REST APIs. Modern AI integrations face five common challenges:
 
-- Functional API Testing: Validates chat completions and HTTP 200 responses.
-- Negative Testing and Error Handling: Validates error responses including NotFoundError (404) and AuthenticationError (401).
-- Structured Schema Validation: Enforces data types and required fields using Pydantic models with OpenAI Structured Outputs.
-- Test Fixtures: Uses Pytest fixtures for client instantiation and configuration reuse.
-- HTML Reporting: Generates standalone HTML execution reports using pytest-html.
-- Automated CI/CD: Executes tests automatically on code push or pull request via GitHub Actions.
+1.Unpredictable Answers: AI outputs change with every call, making exact-text checks unreliable.
+2. Unstructured Responses: Applications need clean, strictly typed JSON data, not long prose.
+3. Security & Cost Risks: Leaked API keys can cause major security breaches and unexpected costs.
+4. Frequent API Failures: Endpoints can fail due to rate limits, invalid keys, or deprecated models.
+5. Poor Pipeline Visibility: Teams need instant visual reports in their CI/CD pipelines to catch breaking changes early.
 
+## How This Project Solves It
+This framework uses Pytest, Pydantic, and GitHub Actions to solve these issues:
+
+- Pydantic Data Schemas: Forces AI outputs into exact JSON types (strings, numbers, lists).
+- Automated Exception Handling: Tests failure states (like 401 or 404 errors) without crashing the suite.
+- Secure Secret Management: Keeps API keys safe locally and in GitHub Actions.
+- Visual HTML Reports: Generates easy-to-read execution reports automatically on every code push.
 ---
 
 ## Project Structure

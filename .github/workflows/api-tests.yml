@@ -1,10 +1,8 @@
 name: API Automation Test Suite
 
-# Trigger workflow on every push or pull request to main branch
+# Trigger workflow on every push to main branch
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]
 
 jobs:
